@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calificación de Servicio | Industrias VJ</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f3c88, #3a6ea5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 320px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        h2 {
+            color: #1f3c88;
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            flex-direction: row-reverse;
+            margin: 15px 0;
+        }
+
+        .stars input {
+            display: none;
+        }
+
+        .stars label {
+            font-size: 32px;
+            color: #ccc;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .stars input:checked ~ label,
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: gold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 70px;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            resize: none;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 12px;
+            padding: 10px;
+            width: 100%;
+            background: #1f3c88;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #16306b;
+        }
+
+        #mensaje {
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style><script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy } 
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+   apiKey: "AIzaSyCwB6DGXqPaqAdGPL7SKk3l4JltFFALD_w",
+    authDomain: "industrias-vj.firebaseapp.com",
+    projectId: "industrias-vj",
+    storageBucket: "industrias-vj.firebasestorage.app",
+    messagingSenderId: "57943838836",
+    appId: "1:57943838836:web:7afd50483e021bcf4d0121"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+</script>
+
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Industrias VJ</h2>
+    <p>Califica nuestro servicio</p><iframe 
+  src="https://docs.google.com/forms/d/e/1FAIpQLSfRwRo-A6hBwMkWUTuS-isOzWhr-3QGAmC-5hAJaRBSIOHnDQ/viewform?embedded=true"
+  width="100%"
+  height="600"
+  frameborder="0">
+  Cargando…
+</iframe>
+
+
+    
+        <input type="radio" name="star" id="star5"><label for="star5">★</label>
+        <input type="radio" name="star" id="star4"><label for="star4">★</label>
+        <input type="radio" name="star" id="star3"><label for="star3">★</label>
+        <input type="radio" name="star" id="star2"><label for="star2">★</label>
+        <input type="radio" name="star" id="star1"><label for="star1">★</label>
+    </div>
+
+    
+    
+
+   
+
+    <footer>© 2025 Industrias VJ</footer>
+</div>
+
+
+</body>
+</html>
